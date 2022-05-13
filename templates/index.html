@@ -1,0 +1,347 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-5 py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-3 text-white animated slideInLeft">Développez vos<br>Compétences</h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">Crée par décret 2009-190 du 24 juin 2009, Le CEFA est un centre d'etucation de formation et d'apprentissage sous tutelle du Ministère de l'Enseignement Technique et Professionnel, géré en partenariat avec le secteur productif.</p>
+                <a href="#savoir-plus" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">En Savoir plus</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                <img class="img-fluid" src="{% static '' %}img/CEFA-B.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+<!-- section 1: A propos de CEFA -->
+<div class="container py-2 px-0 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row g-0">
+        <div class="col-md-6 mb-4" id="savoir-plus">
+            <div class="video">
+                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/JJkuGvfFKOw" data-bs-target="#videoModal">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4 wow fadeInUp px-4" data-wow-delay="0.2s">
+                <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                    <h5>NOTRE MISSION</h5>
+                </div>
+
+                <ul class="ul-exp">
+                    <li>Former des jeunes en alternance dans divers métiers</li>
+                    <li>Répondre aux besoins de qualification des personnes en quête d'emplois</li>
+                    <li>Répondre aux besoins de perfectionnement ou de reconversion des salariés d'entreprises, des artisans, des privés, en vue d'une meilleure employabilité.</li>
+                </ul>
+
+                <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                    <h5>NOTRE EXPERTISE</h5>
+                </div>
+
+                <p class="mb-4 px-2">Individualisation des apprentissages des méthodes pédagogiques adaptées aux besoins des bénéficiaires</p>
+                
+        </div>
+    </div>
+</div>
+<!-- Fin de section 1 -->
+
+<!-- section 2: -->
+<div class="container-xxl my-md-5">
+    <div class="container">
+
+        <div class="row py-md-3 formateur">
+            <div class="col-md-6 p-md-0 wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="block-titre">NOS FORMATEURS</h5>
+
+                <ul class="ul-formateur">
+                    <li>Le CEFA MB-FC compte 33 agents dont 14 formateurs métiers et 04 enseignants au service des apprenants</li>
+
+                    <li>Ils forment, accompagnent, conseillent les bénéficiares des formations afin de leur permettre de développer leurs compétences</li>
+
+                    <li>
+                        Ils sont régulièrement formés aux évolutions pédagogiques et didactiques (Approche Par Compétences)
+                    </li>
+
+                </ul>
+                
+                <!-- <a class="btn btn-danger py-2 px-3 mt-3" href="{% url 'inscription_url' %}">Demander une inscription</a> -->
+            </div>
+
+            <img src="{% static '' %}img/formateur2.png" class="px-md-4 col-md-6 wow fadeInUp mb-4 mb-md-0" data-wow-delay="0.1s" style="object-fit: cover;">
+
+        </div>
+    </div>
+</div>
+<!-- Fin section 2 -->
+
+
+<!-- section 2: -->
+<div class="container-xxl bg-light p-0" style="background-image: url('{% static '' %}img/26.png'); background-attachment: fixed;">
+    <div class="container-xxl py-3" style="background-color: rgba(250, 250, 250, 0.8);">
+        <div class="container">
+
+        <div class="row py-3">
+            <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                <h5>NOS OFFRES DE FORMATIONS</h5>
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                <p style="max-width: 450px;">07 filières pour des formations métiers du bâtiment, en froid et climatisation (diplômantes et qualifiantes)</p>
+            </div>
+        </div>
+
+        <div class="row" id="row-box">
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">01</div>
+                        <div class="content-form">
+                        <strong>Equipements froid et climatisation</strong>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content-form">
+                        <strong>Menuiserie, charpente, bois, couverture</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content-form">
+                        <strong>Menuiserie, charpente, bois, couverture</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content-form">
+                        <strong>Menuiserie, charpente, bois, couverture</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content-form">
+                        <strong>Menuiserie, charpente, bois, couverture</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content-form">
+                        <strong>Menuiserie, charpente, bois, couverture</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 px-1 mb-2 wow fadeInUp">
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content-form">
+                        <strong>Menuiserie, charpente, bois, couverture</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 wow fadeInUp p-1 mb-1" style="height: 180px; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, .5);">
+                <a class="btn btn-danger py-2 px-3 mt-3" href="{% url 'inscription_url' %}">Inscription</a>
+            </div> 
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-4 wow fadeInUp b-border-left" data-wow-delay="0.1s" style=" border-left: 10px solid #dc3545;">
+
+                <h5 style="background-color: #dc3545;" class="t-border-left text-light px-3">Brazzaville</h5>
+
+                <h6>CEFA Metiers de services</h6>
+
+                <ul>
+                    <li>Services administratifs aux entreprises</li>
+                    <li>Coupe-couture-confection</li>
+                    <li>Coiffure-esthetique-cosmétique</li>
+                    <li>Restauration services</li>
+
+                    <li>Services hôteliers</li>
+
+                    <li>Cuisine</li>
+                </ul>
+
+                <h6>CEFA Metiers du batîment, froid et climatisation</h6>
+                <ul>
+                    <li>Equipements froid et climatisation</li>
+                    <li>Menuiserie-charpente-bois-couverture</li>
+                    <li>Finitions du bâtiment</li>
+                    <li>Construction métalique-aluminium et verre</li>
+                    <li>Installations électrique et domotique</li>
+                    <li>Installations sanitaire et traitement des eaux</li>
+                    <li>Froid électroménager</li>
+                    <li>Gros oeuvre du bâtiment</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp b-border-left" data-wow-delay="0.1s" style="border-left: 10px solid #0d6efd;">
+
+                <h5 style="background-color: #0d6efd;" class="t-border-left text-light px-3">Pointe - Noire</h5>
+
+                <h6>CEFA Metiers de maintenance industrielle</h6>
+                <ul>
+                    <li>Ouvrages métaliques et soudures</li>
+                    <li>Systèmes mécaniques et hydrauliques</li>
+                    <li>Equipements froid et climatisation</li>
+                    <li>Electronique</li>
+                    <li>Electrotechnique</li>
+                </ul>
+
+                <h6>CEFA Mécanique automobile</h6>
+                <ul>
+                    <li>Maintenance automobile</li>
+                </ul>
+
+                <h6>CEFA Métiers de service</h6>
+
+                <ul>
+                    <li>Services administratifs aux entreprises</li>
+                    <li>Coupe-couture-confection</li>
+                    <li>Coiffure-esthetique-cosmétique</li>
+                    <li>Restauration services</li>
+
+                    <li>Services hôteliers</li>
+
+                    <li>Cuisine</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp b-border-left" data-wow-delay="0.1s" style="border-left: 10px solid green;">
+
+                <h5 style="background-color: green;" class="t-border-left text-light px-3">Dolisie</h5>
+
+                <h6>CEFA Metiers rureaux</h6>
+                <ul>
+                    <li>Maraîchage</li>
+                    <li>Aviculture</li>
+                    <li>Elevage porcin</li>
+                    <li>Maintenance en matériels agricoles</li>
+
+                    <li>Menuiserie agencement</li>
+
+                    <li>Entretien bâtiment : Peinture-carrelage-électricité-plomberie</li>
+                </ul>
+
+            </div>
+        </div> -->
+
+    </div>
+    </div>
+</div>
+<!-- Fin section 2 -->
+
+<!-- section 3: -->
+<div class="container-xxl my-5 px-0 py-0">
+    <div style="background-color: rgba(250, 250, 250, 0.7);">
+        <div class="container py-5">
+
+        <div class="row py-3 px-3 px-md-0">
+            <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                <h5>NOS FORMATIONS EN IMAGES</h5>
+            </div>
+        </div>
+
+        <div class="row pb-3" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+            {% for image in images %}
+            <img src="{{image.image.url}}" class="col-md-3 p-1 wow fadeInUp p-0" data-wow-delay="0.1s" alt="{{image.description}}">  
+            {% endfor %}
+            
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Fin section 3 -->
+
+<!-- section 4: -->
+<div class="container-xxl my-">
+    <div class="container">
+
+        <div class="row py-3">
+            <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                <h5>NOS ACTUALITES</h5>
+            </div>
+        </div>
+
+        <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+
+            {% for actualite in actualites %}
+            <a href="{% url 'actualite_detail_url' actualite.id %}" class="col-md-3 wow fadeInUp p-1 actualite-block" data-wow-delay="0.1s">
+
+                <img src="{{actualite.image.url}}">
+
+                <div class="bg-danger mb-1" align="center" style="max-width: 100px;">
+                    <span class="text-light text-center" style="font-size: 13px;">{{actualite.date}}</span>
+                </div>
+
+                <div class="px-2 pt-2">
+                    <h6 class="text-dark">{{actualite.titre|truncatechars:"60"}}</h6>
+                </div>
+
+                <hr class="bg-dark text-dark">
+            </a>
+            {% endfor %}
+
+
+        </div>
+
+        <div class="row my-2">
+            <div class="col-md-12 wow fadeInUp d-flex justify-content-end" data-wow-delay="0.1s">
+                <a href="{% url 'actualites_url' %}" class="btn btn-danger m-0">Voir plus</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin section 4 -->
+
+
+<!-- lecture vidéo de la page d'accueil -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Présentation CEFA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                        allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin lecture vidéo -->
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="container-xxl py-2 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Detail</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'actualites_url' %}">Actualités</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Detail</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-xxl my-5">
+            <div class="container px-md-5">
+                <div class="row px-md-5">
+                    <h3 class="mb-4">{{actualite.titre}}</h3>
+                    <img src="{{actualite.image.url}}" class="col-12" style="max-height: 350px; object-fit: cover;">
+                </div>
+
+                <div class="bg-danger mb-1 mx-md-5" align="center" style="max-width: 100px;">
+                    <span class="text-light text-center" style="font-size: 13px;">{{actualite.date}}</span>
+                </div>
+
+                <div class="row mt-3 px-md-5">
+                    <div class="col-12">
+                        {{actualite.description|safe}}
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

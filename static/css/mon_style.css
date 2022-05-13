@@ -1,0 +1,43 @@
+#navbar{
+	position: fixed; 
+	width: 100%; 
+	z-index: 1000;
+}
+
+.block-titre{
+	padding-left: 20px; 
+	margin-bottom: 20px; 
+	border-left: 10px solid #333;
+}
+
+.b-border-left{
+	padding-left: 20px; 
+	margin-bottom: 20px;
+}
+
+.t-border-left{
+	max-width: 170px; 
+	margin-bottom: 20px;
+}
+
+.actualite-block{
+	background: #ffff; 
+	height: 300px; 
+	margin-bottom: 20px;
+}
+
+.actualite-block img{
+	width: 100%; 
+	height: 60%; 
+	object-fit: cover;
+}
+
+#form-inscription label{
+	font-size: 14px;
+	font-family: Chilanka;
+}
+
+#form-inscription input, #form-inscription select option, #form-inscription small{
+	font-size: 14px;
+	font-family: Chilanka;
+}

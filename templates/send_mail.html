@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="description" content="">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Global Academia Business</title>
+
+		<style type="text/css">
+			.content{
+				width: 500px;
+				max-width: 90%;
+				margin: auto;
+				border-radius: 10px;
+			}
+
+			#img{
+				background-image: url('https://gab.pythonanywhere.com/static/img/gab2.png');
+				width: 100%;
+				height: 200px;
+				background-size: cover;
+				background-position: center;
+				object-fit: cover;
+				border-radius: 10px 10px 0px 0;
+			}
+
+			*{
+				font-family: Century Gothic;
+			}
+
+			h1{
+				padding: 0 10px;
+			}
+
+			p{
+				padding: 10px;
+			}
+
+			#btn{
+				display: inline-block;
+				width: 100%;
+				background: #dc3545;
+				color: #fff;
+				font-weight: bold;
+				padding: 20px 0;
+				text-align: center;
+				text-decoration: none;
+				border-radius: 0px 0 10px 10px;
+			}
+
+			#span{
+				display: inline-block;
+				font-size: 12px;
+				color: blue;
+				padding: 0 10px;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+
+			#span a{
+				text-decoration: none;
+				text-align: center;
+			}
+
+			#header{
+				background-color: #555;
+				padding: 20px 0;
+				text-align: center;
+				text-decoration: none;
+				border-radius: 10px 10px 0 0;
+			}
+
+			#header h4{
+				color: #fff;
+			}
+
+			ul{
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+
+
+		<div class="content">
+			<div id="header">
+			<h4>{{nom|upper}} {{prenom|title}} vous contacte pour une «Demande d'inscription».</h4>
+			</div>
+
+			<div>
+				<ul>
+					<h4>Voici ces informations:</h4>
+					<li>Nom(s): {{nom}}</li>
+					<li>Prénom: {{prenom}}</li>
+					<li>Date de naissance: {{date_nais}}</li>
+					<li>Ville de résidence: {{ville}}</li>
+					<li>Numéro de téléphone: {{telephone}}</li>
+					<li>Demande d'inscription pour le: {{choix_cefa}}</li>
+
+					<br>
+					<a href="tel:{{telephone}}">{{telephone}}</a> (Cliquez sur le numéro pour contacter l'etudiant)
+				</ul>
+			</div>
+
+			<a href="https://cefa.pythonanywhere.com/" id="btn">voir le site (CEFA)</a>
+
+		</div>
+		
+	</body>
+</html>

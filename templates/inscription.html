@@ -1,0 +1,205 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="container-xxl py-2 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Inscription</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Inscription</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-xxl my-5">
+    <div class="container">
+
+        <div class="row pt-3">
+            <div class="col-md-6 offset-md-3 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                <h5>CONDITIONS D'INSCRIPTION</h5>
+            </div>
+        </div>
+    
+
+	    <div class="row pb-3">
+	        <div class="col-md-6 offset-md-3 my-1 p-0">
+                <div class="accordion">
+                    
+                    <div class="contentBx">
+                        <div class="label">Formation initiale par apprentissage type dual</div>
+                        <div class="content">
+                            <ul>
+                                <li>A partir de 16 ans</li>
+                                <li>Contrat d'apprentissage</li>
+                                <li>Dossier d'inscription</li>
+                                <li>Admissible au test d'entrée au CEFA</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">list</div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">list</div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">list</div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+	        <div class="col-md-6 offset-md-3 wow fadeInUp py-3 mt-3" data-wow-delay="0.1s" style="border: 1px solid black; border-radius: 5px;">
+	            <h6 class="mx-3">Dossier à fournir en presentiel</h6>
+	            <ul>
+	                <li><span>01</span> Formulaire fourni par le CEFA</li>
+	                <li><span>02</span> Photos identité en couleur</li>
+	                <li><span>01</span> Photocopie d'acte de naissance</li>
+	                <li><span>01</span> Photocopie légalisée du dernier diplôme ou Attestion de Niveau</li>
+	                <li><span>01</span> Enveloppe kaki A4</li>
+	                <li>Frais d'etude du dossier <span>5000Fcfa</span></li>
+	                <li id="message"><span>01</span> Formulaire fourni par le CEFA</li>
+	            </ul>
+	        </div>
+	    </div>
+
+
+        <div class="row pt-3">
+            <div class="col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.1s">
+                {% if messages %}
+                        {% for message in messages %}
+
+                            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Erreur !</strong> {{message}}
+                                </div>
+
+                            {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                      <strong>Reussie !</strong> {{message}}
+                                </div>
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% endif %}
+            </div>
+        </div>
+
+	    <div class="row pb-3">
+                    <div class="col-md-6 offset-md-3 wow fadeInUp py-3" data-wow-delay="0.1s">
+
+                    </div>
+
+                    <div class="col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <form method="POST" id="form-inscription">
+                            {% csrf_token %}
+                            <div class="form-group my-2">
+                                <label class="form-label">Nom(s)</label>
+                                <input class="form-control" placeholder="Votre nom de famille" type="text" name="nom">
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label class="form-label">Prénom(s)</label>
+                                <input class="form-control" placeholder="Votre prénom" type="text" name="prenom">
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label class="form-label">Date de naissance</label>
+                                <input class="form-control" type="date" name="dateNais">
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label class="form-label">Vous êtes ? </label>
+
+                                <label for="homme" class="form-check-label">homme</label>
+                                <input class="form-check-input" type="radio" name="genre" value="homme" id="homme">
+
+                                <label for="femme" class="form-check-label">femme</label>
+                                <input class="form-check-input" type="radio" name="genre" value="femme" id="femme">
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label class="form-label">Télephone</label>
+                                <input class="form-control" placeholder="Numéro de téléphone valide" type="text" name="tel">
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label class="form-label">Ville</label>
+                                <input class="form-control" placeholder="Votre ville de residence" type="text" name="residence">
+                            </div>
+
+
+                            <div class="form-group my-2">
+                                <select name="cefa" class="form-select">
+                                    <option selected disabled>Choix du centre</option>
+                                    <optgroup label="Brazzaville">
+                                        <option value="CEFA Metiers de services (Brazzaville)">CEFA Metiers de services</option>
+                                        <option value="CEFA Metiers du batîment, froid et climatisation (Brazzaville)">CEFA Metiers du batîment, froid et climatisation</option>
+                                    </optgroup>
+
+                                    <optgroup label="Pointe-Noire">
+                                        <option value="CEFA Metiers de maintenance industrielle (Pointe-Noire)">CEFA Metiers de maintenance industrielle</option>
+
+                                        <option value="CEFA Mécanique automobile (Pointe-Noire)">CEFA Mécanique automobile</option>
+
+                                        <option value="CEFA Métiers de service (Pointe-Noire)">CEFA Métiers de service</option>
+                                    </optgroup>
+
+                                    <optgroup label="Dolisie">
+                                        <option value="CEFA Metiers rureaux (Dolisie)">CEFA Metiers rureaux</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="form-group my-2">
+                                <button type="submit" class="btn btn-success col-12">Envoyer</button>
+                            </div>
+
+                            <div class="form-group my-2">
+                                <small>Le CEFA MB-FC est ouvert du lundi au vendredi de 8h00 à 16h00, au cas où vous devriez passer pour valider votre inscription.</small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+	</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    const accordion = document.getElementsByClassName('contentBx');
+
+    for(i = 0; i < accordion.length; i++){
+        accordion[i].addEventListener('click', function(){
+            this.classList.toggle('active')
+        })
+    }
+</script>
+{% endblock %}

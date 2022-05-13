@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="container-xxl py-2 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Actualités</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">ACTUALITES</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-xxl my-5">
+    <div class="container">
+
+        <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+            {% for actualite in actualites %}
+            <a href="{% url 'actualite_detail_url' actualite.id %}" class="col-md-3 wow fadeInUp p-1 actualite-block" data-wow-delay="0.1s">
+
+                <img src="{{actualite.image.url}}">
+
+                <div class="bg-danger mb-1" align="center" style="max-width: 100px;">
+                    <span class="text-light text-center" style="font-size: 13px;">{{actualite.date}}</span>
+                </div>
+
+                <div class="px-2 pt-2">
+                    <h6 class="text-dark">{{actualite.titre|truncatechars:"60"}}</h6>
+                </div>
+
+                <hr class="bg-dark text-dark">
+            </a>
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
