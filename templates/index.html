@@ -315,14 +315,41 @@
 
         </div>
 
-        <div class="row my-2">
-            <div class="col-md-12 wow fadeInUp d-flex justify-content-end" data-wow-delay="0.1s">
-                <a href="{% url 'actualites_url' %}" class="btn btn-danger m-0">Voir plus</a>
+        <div class="row mb-2">
+            <div class="col-md-12 wow fadeInUp d-flex justify-content-start" data-wow-delay="0.1s">
+                <a href="{% url 'actualites_url' %}" class="btn btn-danger m-0" style="font-size: 12px;">Voir plus</a>
             </div>
         </div>
     </div>
 </div>
 <!-- Fin section 4 -->
+
+
+<div class="container-xxl my-5">
+    <div class="container">
+
+        <div class="row py-3" style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center;">
+            <div class="col-md-7 my-md-4">
+                <h6>INSCRIVEZ-VOUS À LA NEWSLETTER</h6>
+                <small>Pour recevoir les dernières nouveautés du centre ainsi que nos actualités recentes.</small>
+            </div>
+
+            <div class="col-md-5 my-4">
+                <form method="post" action="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <input type="email" name="" class="form-control" style="width: 70%; display: inline-block;" placeholder="adresse@exemple.com">
+
+                        <button class="btn btn-primary" style="width: 28%; display: inline-block; background-color: #dc3545; border: none; font-size: 12px;">
+                            <i class=""></i>
+                            s'inscrire
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
 <!-- lecture vidéo de la page d'accueil -->
