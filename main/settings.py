@@ -19,6 +19,9 @@ INSTALLED_APPS = [
 
     # mes applications
     'app_data',
+    'ckeditor',
+
+    'django_social_share',
 ]
 
 MIDDLEWARE = [

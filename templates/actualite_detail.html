@@ -1,5 +1,6 @@
 {% extends 'layout/base.html' %}
 {% load static %}
+{% load social_share %}
 
 {% block header %}
 <div class="container-xxl py-2 bg-dark hero-header mb-5">
@@ -32,6 +33,21 @@
                 <div class="row mt-3 px-md-5">
                     <div class="col-12">
                         {{actualite.description|safe}}
+                    </div>
+                </div>
+
+                <div class="row mt-3 px-md-5">
+                    <div class="col-12 p-5 pt-1 pb-0 blog-share">
+                        <h5 class="text-center">Partagez autour de vous! <br><br>
+                            
+                          {% post_to_facebook object_or_url "<i class='fab fa-facebook-f'></i>" "text-center partage-1 btn btn-primary" %}
+
+                          {% post_to_whatsapp object_or_url "<i class='fab fa-whatsapp'></i>" "text-center partage-2 btn btn-success" %}
+
+                          {% post_to_telegram "{{detail.titre}}" object_or_url '<i class="fab fa-telegram"></i>' "text-center partage-3 btn btn-primary" %}
+
+
+                        </h5>
                     </div>
                 </div>
             </div>

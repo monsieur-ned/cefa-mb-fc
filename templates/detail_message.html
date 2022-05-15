@@ -1,0 +1,44 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="container-xxl py-2 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown"><small>Message de la Directrice</small></h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="/">Accueil</a></li><li class="breadcrumb-item"><a href="{% url 'about_url' %}">A Propos</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">message</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container-xxl">
+    <div class="container px-md-5">
+
+        <div class="row bg-dk">
+            <img class="col-md-4 offset-md-4 bg-dark p-0" src="{{message_dg.photo.url}}" />
+            <small class="col-md-4 offset-md-4 mb-3 p-0" src="{{message_dg.photo.url}}" style="font-size: 11px;">{{message_dg.nom}}</small>
+
+            <div class="col-md-8 px-md-4 mb-3 my-3 offset-md-2">
+
+                <div class="col-md-12 my-3 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                    <h5>Message de la Directrice</h5>
+                </div>
+
+                <div class="col-md-12 my-3 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                    {{message_dg.message|safe}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

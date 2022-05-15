@@ -4,13 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Réseau CEFA du Congo | Centre d'Etucation de Formation et d'Apprentissage</title>
+    <title>CEFA MB-FC | Centre d'Etucation de Formation et d'Apprentissage - Metiers du batîment, froid et climatisation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <link href="{% static '' %}img/CEFA.png" rel="icon">
+    <link href="{% static '' %}img/CEFA-B.png" rel="icon">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{% url 'accueil_url' %}" class="nav-item nav-link active">Accueil</a>
-                        <a href="/#savoir-plus" class="nav-item nav-link">A Propos</a>
+                        <a href="{% url 'about_url' %}" class="nav-item nav-link">A Propos</a>
                         <a href="{% url 'actualites_url' %}" class="nav-item nav-link">Actualités</a>
                         <a href="{% url 'inscription_url' %}" class="nav-item nav-link">Inscription</a>
                         <a href="{% url 'contact_url' %}" class="nav-item nav-link">Contacts</a>
@@ -80,7 +80,7 @@
 
                             <small class="text-center d-md-none d-lg-none mb-2 col-12" style="display: block; font-size: 15px; color: #eee;">Nous suivre !</small>
 
-                            <a href="" class="link-social" style="background-color: blue;">
+                            <a href="" class="link-social" style="background-color: #0d6efd;">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
 

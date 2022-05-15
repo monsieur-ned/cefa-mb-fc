@@ -1,0 +1,160 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="container-xxl py-2 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown"><small>CEFA MB-FC</small></h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+                <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">A Propos</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+{% if message_dg %}
+<div class="container-xxl">
+    <div class="container px-md-5">
+
+        <div class="row bg-dk">
+            
+            <div class="col-md-4 mb-3 p-0"> 
+                <img src="{{message_dg.photo.url}}" style="max-height: 200px; object-fit: cover;" />
+
+                <small class="col-md-12 mb-3 p-0" src="{{message_dg.photo.url}}" style="font-size: 11px;">{{message_dg.nom}}</small>
+            </div>
+
+            <div class="col-md-8 px-md-4 mb-3">
+
+                <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                    <h5>Message de la Directrice</h5>
+                </div>
+
+                <div>
+                    {{message_dg.message|safe|truncatechars:"400"}}
+                </div>
+
+                {% if message_dg.message|length > 400 %}
+                <a href="{% url 'detail-message' message_dg.id %}">lire plus</a>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endif %}
+
+<!-- section 1: A propos de CEFA -->
+<div class="container py-2 my-5 px-md-2 px-0 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row g-0">
+
+        <div class="col-md-7 mb-4 wow fadeInUp px-4" data-wow-delay="0.2s">
+                <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                    <h5>Reseau des CEFA</h5>
+                </div>
+
+                <p class="px-md-3">Crée par décret 2009-190 du 24 juin 2009, Le CEFA est un centre d'etucation de formation et d'apprentissage sous tutelle du Ministère de l'Enseignement Technique et Professionnel, géré en partenariat avec le secteur productif.</p>
+
+                <p class="mb-4 px-md-3">Individualisation des apprentissages des méthodes pédagogiques adaptées aux besoins des bénéficiaires</p>
+                
+        </div>
+
+        <img src="{% static '' %}img/CEFA.png" class="col-md-5 mb-4" />
+    </div>
+
+    <div class="row g-0 px-md-4 px-2">
+
+            <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                <h5>Nos offres de formation par CEFA</h5>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp b-border-left" data-wow-delay="0.1s" style=" border-left: 10px solid #dc3545;">
+
+                <h5 style="background-color: #dc3545;" class="t-border-left text-light px-3">Brazzaville</h5>
+
+                <h6>CEFA Metiers de services</h6>
+
+                <ul>
+                    <li>Services administratifs aux entreprises</li>
+                    <li>Coupe-couture-confection</li>
+                    <li>Coiffure-esthetique-cosmétique</li>
+                    <li>Restauration services</li>
+
+                    <li>Services hôteliers</li>
+
+                    <li>Cuisine</li>
+                </ul>
+
+                <h6>CEFA Metiers du batîment, froid et climatisation</h6>
+                <ul>
+                    <li>Equipements froid et climatisation</li>
+                    <li>Menuiserie-charpente-bois-couverture</li>
+                    <li>Finitions du bâtiment</li>
+                    <li>Construction métalique-aluminium et verre</li>
+                    <li>Installations électrique et domotique</li>
+                    <li>Installations sanitaire et traitement des eaux</li>
+                    <li>Froid électroménager</li>
+                    <li>Gros oeuvre du bâtiment</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp b-border-left" data-wow-delay="0.1s" style="border-left: 10px solid #0d6efd;">
+
+                <h5 style="background-color: #0d6efd;" class="t-border-left text-light px-3">Pointe - Noire</h5>
+
+                <h6>CEFA Metiers de maintenance industrielle</h6>
+                <ul>
+                    <li>Ouvrages métaliques et soudures</li>
+                    <li>Systèmes mécaniques et hydrauliques</li>
+                    <li>Equipements froid et climatisation</li>
+                    <li>Electronique</li>
+                    <li>Electrotechnique</li>
+                </ul>
+
+                <h6>CEFA Mécanique automobile</h6>
+                <ul>
+                    <li>Maintenance automobile</li>
+                </ul>
+
+                <h6>CEFA Métiers de service</h6>
+
+                <ul>
+                    <li>Services administratifs aux entreprises</li>
+                    <li>Coupe-couture-confection</li>
+                    <li>Coiffure-esthetique-cosmétique</li>
+                    <li>Restauration services</li>
+
+                    <li>Services hôteliers</li>
+
+                    <li>Cuisine</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp b-border-left" data-wow-delay="0.1s" style="border-left: 10px solid green;">
+
+                <h5 style="background-color: green;" class="t-border-left text-light px-3">Dolisie</h5>
+
+                <h6>CEFA Metiers rureaux</h6>
+                <ul>
+                    <li>Maraîchage</li>
+                    <li>Aviculture</li>
+                    <li>Elevage porcin</li>
+                    <li>Maintenance en matériels agricoles</li>
+
+                    <li>Menuiserie agencement</li>
+
+                    <li>Entretien bâtiment : Peinture-carrelage-électricité-plomberie</li>
+                </ul>
+
+            </div>
+        </div>
+</div>
+<!-- Fin de section 1 -->
+
+{% endblock %}

@@ -17,7 +17,6 @@
 
 
 
-{% block content %}
 <div class="container-xxl my-5" id="contact">
     <div class="container">
 
@@ -209,6 +208,137 @@
                         <a href="mailto:guybertinsolo@gmail.com">guybertinsolo@gmail.com</a></li>
                 </ul>
 
+            </div>
+        </div>
+
+        <!-- <div class="row py-3">
+            <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">
+                <h5>NOUS SUIVRES</h5>
+            </div>
+        </div> -->
+        
+    </div>
+</div>
+
+{% block content %}
+
+<div class="container-xxl my-5" id="contact">
+    <div class="container">
+
+        <div class="row px-md-4 px-2">
+            <div class="col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.1s" style="padding-left: 20px; margin-bottom: 20px; border-left: 10px solid #dc3545;">
+
+                <h5 style="max-width: 170px; margin-bottom: 20px; background-color: #dc3545; color: #fff;" class="px-3">Nos contacts</h5>
+
+
+                <h6>CEFA Metiers du batîment, froid et climatisation</h6>
+                <ul id="ul-contact">
+                    <li>
+                        <div class="div-icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+
+                        <div>
+                            Entre les lycées techniques industriel et commercial 1<sup>er</sup> Mai
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div class="div-icon">
+                            <i class="fa fa-phone-alt"></i>
+                        </div>
+
+                        <div>
+                            <b>Direction:</b> <a href="tel:+242 06 641 91 68">(+242) 06 641 91 68</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="div-icon">
+                            <i class="fa fa-phone-alt"></i>
+                        </div>
+
+                        <div>
+                            <b>Conseiller:</b> <a href="tel:+242 06 659 30 88">(+242) 06 659 30 88</a> / <a href="tel:+242 05 551 88 05">05 551 88 05</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="div-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        
+                        <div>
+                            
+                            <a href="mailto:mowandza@gmail.com">mowandza@gmail.com</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row my-3">
+
+            <div class="col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.1s">
+
+                <div class="mb-3">
+                    <small>Merci de remplir ce formulaire de contact pour joindre l'administration du CEFA MB-FC.</small>
+                </div>
+
+                {% if messages %}
+                        {% for message in messages %}
+
+                            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Erreur !</strong> {{message}}
+                                </div>
+
+                            {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                      <strong>Reussie !</strong> {{message}}
+                                </div>
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                <!-- formulaire contact -->
+                <form method="POST" id="form-inscription">
+                    {% csrf_token %}
+                    <div class="form-group mb-1">
+                        <label class="form-label">Nom</label>
+                        <input  class="form-control" type="text" name="nom" placeholder="Nom complet">
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group mb-1 col-md-6">
+                            <label class="form-label">Téléphone</label>
+                            <input class="form-control" type="text" name="telephone" placeholder="Numéro de téléphone">
+                        </div>
+
+                        <div class="form-group mb-1 col-md-6">
+                            <label class="form-label">Email</label>
+                            <input class="form-control" type="email" name="email" placeholder="Adresse électronique">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-1">
+                        <label class="form-label">Objet de votre message</label>
+                        <input  class="form-control" type="text" name="objet" placeholder="Objet de votre message">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" style="height: 90px;" name="message"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="submit" class="btn btn-danger col-12" value="Envoyer">
+                    </div>
+                </form>
             </div>
         </div>
 

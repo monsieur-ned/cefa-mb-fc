@@ -518,13 +518,14 @@
 }
 
 .div-icon{
-    width: 18px;
-    height: 18px;
+    min-width: 25px;
+    min-height: 25px;
     background: #555;
-    border-radius: 50%;
+    border-radius: 360px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-right: 15px;
 }
 
 .div-icon i{
@@ -532,13 +533,14 @@
     font-size: 9px;
 }
 
-a, p, li, strong, small{
+a, p, li, strong, small, option, select{
     font-family: "Nunito",sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6{
 
-} 
+}
+
 
 a{
     color: #dc3545;
@@ -681,4 +683,39 @@ a{
 
     color: #fff;
     text-decoration: none;
+}
+
+
+#ul-contact li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+} 
+
+.blog-share div{
+        display: inline-block;
+        border-radius: 360px;
+      }
+
+.partage-3, .partage-2, .partage-1{
+        width: 40px;
+        height: 40px;
+        border-radius: 360px;
+        font-size: 20px;
+        padding: 5px;
+        display: inline-block;
+        border: none;
+      }
+
+.partage-1{
+  background-color: #337ab7;
+}
+
+.partage-2{
+  background-color: #5cb85c;
+}
+
+.partage-3{
+  background-color: #337ab7;
 }

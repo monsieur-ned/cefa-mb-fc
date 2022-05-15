@@ -22,14 +22,14 @@
     <div class="container">
 
         <div class="row pt-3">
-            <div class="col-md-6 offset-md-3 wow fadeInUp block-titre" data-wow-delay="0.1s">
+            <!-- <div class="col-md-6 offset-md-3 wow fadeInUp block-titre" data-wow-delay="0.1s">
                 <h5>CONDITIONS D'INSCRIPTION</h5>
-            </div>
+            </div> -->
         </div>
     
 
 	    <div class="row pb-3">
-	        <div class="col-md-6 offset-md-3 my-1 p-0">
+	        <!-- <div class="col-md-6 offset-md-3 my-1 p-0">
                 <div class="accordion">
                     
                     <div class="contentBx">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -120,17 +120,17 @@
                             {% csrf_token %}
                             <div class="form-group my-2">
                                 <label class="form-label">Nom(s)</label>
-                                <input class="form-control" placeholder="Votre nom de famille" type="text" name="nom">
+                                {{form.nom}}
                             </div>
 
                             <div class="form-group my-2">
                                 <label class="form-label">Prénom(s)</label>
-                                <input class="form-control" placeholder="Votre prénom" type="text" name="prenom">
+                                {{form.prenom}}
                             </div>
 
                             <div class="form-group my-2">
                                 <label class="form-label">Date de naissance</label>
-                                <input class="form-control" type="date" name="dateNais">
+                                <input type="date" name="date_naissance" class="form-control">
                             </div>
 
                             <div class="form-group my-2">
@@ -145,39 +145,42 @@
 
                             <div class="form-group my-2">
                                 <label class="form-label">Télephone</label>
-                                <input class="form-control" placeholder="Numéro de téléphone valide" type="text" name="tel">
+                                {{form.telephone}}
+                            </div>
+
+                            <div class="form-group my-2">
+                                <label class="form-label">Email</label>
+                                {{form.email}}
                             </div>
 
                             <div class="form-group my-2">
                                 <label class="form-label">Ville</label>
-                                <input class="form-control" placeholder="Votre ville de residence" type="text" name="residence">
+                                {{form.ville}}
                             </div>
 
 
                             <div class="form-group my-2">
-                                <select name="cefa" class="form-select">
-                                    <option selected disabled>Choix du centre</option>
-                                    <optgroup label="Brazzaville">
-                                        <option value="CEFA Metiers de services (Brazzaville)">CEFA Metiers de services</option>
-                                        <option value="CEFA Metiers du batîment, froid et climatisation (Brazzaville)">CEFA Metiers du batîment, froid et climatisation</option>
-                                    </optgroup>
+                                <label class="form-label">Faite le choix de votre filière</label>
+                                <select name="choix_cefa" class="form-select">
+                                
+                                        <option value="Equipements froid, climatisation et Froid électroménager">Equipements froid, climatisation et Froid électroménager</option>
+                                        <option value="Menuiserie, charpente, bois, couverture">Menuiserie, charpente, bois, couverture</option>
+                                    
+                                        <option value="Finitions du bâtiment">Finitions du bâtiment</option>
 
-                                    <optgroup label="Pointe-Noire">
-                                        <option value="CEFA Metiers de maintenance industrielle (Pointe-Noire)">CEFA Metiers de maintenance industrielle</option>
+                                        <option value="Construction métalique-aluminium et verre">Construction métalique-aluminium et verre</option>
 
-                                        <option value="CEFA Mécanique automobile (Pointe-Noire)">CEFA Mécanique automobile</option>
+                                        <option value="Installations électrique et domotique">Installations électrique et domotique</option>
 
-                                        <option value="CEFA Métiers de service (Pointe-Noire)">CEFA Métiers de service</option>
-                                    </optgroup>
+                                        <option value="Installations sanitaire et traitement des eaux">Installations sanitaire et traitement des eaux</option>
 
-                                    <optgroup label="Dolisie">
-                                        <option value="CEFA Metiers rureaux (Dolisie)">CEFA Metiers rureaux</option>
-                                    </optgroup>
+                                        <option value="Gros oeuvre du bâtiment">Gros oeuvre du bâtiment</option>
+
                                 </select>
                             </div>
 
                             <div class="form-group my-2">
-                                <button type="submit" class="btn btn-success col-12">Envoyer</button>
+                                <button type="submit" class="btn btn-danger col-12">Envoyer</button>
                             </div>
 
                             <div class="form-group my-2">

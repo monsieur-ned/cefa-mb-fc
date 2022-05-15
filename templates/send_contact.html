@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+		<style type="text/css">
+				*{
+					margin: 0;
+					padding: 0;
+					font-family: font-family: "Nunito",sans-serif;;
+				}
+				body{
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					padding: 30px 0;
+				}
+
+				.content{
+					width: 80%;
+					border: 1px solid rgba(0, 0, 0, 0.5);
+					border-radius: 5px;
+				}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="content">
+			<h3 style="background-color: #dc3545; padding: 5px 10px; color: #fff;">Message depuis la page contact du site CEFA MB-FC</h3>
+
+			<div>
+				<table>
+
+					<tr>
+						<td>Objet :</td>
+						<td>{{objet}}</td>
+					</tr>
+
+					<tr>
+						<td>Nom :</td>
+						<td><b>{{nom}}</b></td>
+					</tr>
+
+					<tr>
+						<td>Téléphone :</td>
+						<td><a href="tel:{{telephone}}">{{telephone}}</a></td>
+					</tr>
+
+					<tr>
+						<td>Email :</td>
+						<td><a href="mailto:{{email}}">{{email}}</a></td>
+					</tr>
+
+				</table>
+
+				<div style="margin: 20px 0;">
+					<strong>Message :</strong>
+					<br>
+					{{message}}
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
