@@ -21,7 +21,7 @@
 <div class="container-xxl my-5">
     <div class="container">
 
-        <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div class="row" style="display: flex; flex-direction: row; justify-content: flex-start;">
 
             {% for actualite in actualites %}
             <a href="{% url 'actualite_detail_url' actualite.id %}" class="col-md-3 wow fadeInUp p-1 actualite-block" data-wow-delay="0.1s">

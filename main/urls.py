@@ -6,6 +6,10 @@ from django.conf import settings
 
 from . views import *
 
+admin.site.site_header = "CEFA MB-FC"
+admin.site.site_title = "CEFA MB-FC"
+admin.site.index_title = "CEFA MB-FC | Centre d'Etucation de Formation et d'Apprentissage - Metiers du batîment, froid et climatisation"
+
 urlpatterns = [
     path('cefa-admin/', admin.site.urls),
 
