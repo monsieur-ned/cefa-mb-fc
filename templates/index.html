@@ -11,7 +11,7 @@
                 <a href="#savoir-plus" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">En Savoir plus</a>
             </div>
             <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                <img class="img-fluid" src="{% static '' %}img/CEFA-MB-FC.png" alt="">
+                <img class="img-fluid" src="{% static '' %}img/CEFA-B.png" alt="">
             </div>
         </div>
     </div>
@@ -24,13 +24,19 @@
 <!-- section 1: A propos de CEFA -->
 <div class="container py-2 px-0 wow fadeInUp" data-wow-delay="0.1s">
     <div class="row g-0">
+        {% if linkVideo %}
+        {% for video in linkVideo %}
         <div class="col-md-6 mb-4" id="savoir-plus">
             <div class="video">
-                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/JJkuGvfFKOw" data-bs-target="#videoModal">
+
+                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="{{video.link}}" data-bs-target="#videoModal">
                     <span></span>
                 </button>
+
             </div>
         </div>
+        {% endfor %}
+        {% endif %}
 
         <div class="col-md-6 mb-4 wow fadeInUp px-4" data-wow-delay="0.2s">
                 <div class="col-md-12 wow fadeInUp block-titre" data-wow-delay="0.1s">

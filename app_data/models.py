@@ -55,3 +55,11 @@ class Contact(models.Model):
 
 	def __str__(self):
 		return f'{self.nom}'
+
+
+class VideoLink(models.Model):
+	link = models.URLField()
+	created = models.DateTimeField(auto_now_add = True)
+
+	def __str__(self):
+		return f'{self.id} - {self.link}'

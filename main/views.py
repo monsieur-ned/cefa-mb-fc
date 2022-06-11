@@ -66,11 +66,15 @@ def accueil_view(request):
 
 	actualites = Actualite.objects.all().order_by('-id')[:4]
 	images = Image.objects.all().order_by('-id')[:8]
+	linkVideo = VideoLink.objects.all().order_by('-id')[:1]
+
+	print(linkVideo)
 
 	template = "index.html"
 	context = {
 		'actualites': actualites,
 		'images': images,
+		'linkVideo': linkVideo
 	}
 
 	send_newsLetter_fonction()

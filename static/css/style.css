@@ -539,6 +539,11 @@ a, p, li, strong, small, option, select{
     font-family: "Nunito",sans-serif;
 }
 
+textarea::placeholder{
+    font-family: "Nunito",sans-serif;
+    font-size: 11px;
+}
+
 h1, h2, h3, h4, h5, h6{
 
 }
