@@ -156,8 +156,8 @@ def inscription_view(request):
 			if form_ins.is_valid():
 				form_ins.save()
 
-			messages.success(request, "Demande d'inscription envoyée avec succès, Veuillez vous rendre à la direction avec les dossiers ci-dessus pour confirmer votre inscription !")
-			return HttpResponseRedirect('/inscription/#message')
+				messages.success(request, "Demande d'inscription envoyée avec succès, Veuillez vous rendre à la direction avec les dossiers ci-dessus pour confirmer votre inscription !")
+				return HttpResponseRedirect('/inscription/#message')
 		else:
 			messages.error(request, "Echec de l'envoie de la demande d'inscription, Ressayez en remplissant tous les champs ! !")
 			return HttpResponseRedirect('/inscription/#message')
