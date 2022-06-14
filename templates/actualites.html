@@ -26,7 +26,7 @@
             {% for actualite in actualites %}
             <a href="{% url 'actualite_detail_url' actualite.id %}" class="col-md-3 wow fadeInUp p-1 actualite-block" data-wow-delay="0.1s">
 
-                <img src="{{actualite.image.url}}">
+                <img src="https://www.cefa-mbfc/{{actualite.image.url}}">
 
                 <div class="bg-danger mb-1" align="center" style="max-width: 100px;">
                     <span class="text-light text-center" style="font-size: 13px;">{{actualite.date}}</span>
