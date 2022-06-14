@@ -118,9 +118,10 @@ def inscription_view(request):
 		prenom = poste.get('prenom')
 		date_nais = poste.get('dateNais')
 		genre = poste.get('genre')
-		telephone = poste.get('tel')
+		telephone = poste.get('telephone')
 		ville = poste.get('ville')
 		choix_cefa = poste.get('choix_cefa')
+		email = poste.get('email')
 
 		if len(nom) != 0:
 			content = {
@@ -131,6 +132,7 @@ def inscription_view(request):
 				'telephone' : telephone,
 				'ville' : ville,
 				'choix_cefa' : choix_cefa,
+				'email' : email,
 			}
 
 			html_content = render_to_string("send_mail.html", content)
