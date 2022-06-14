@@ -116,7 +116,7 @@ def inscription_view(request):
 
 		nom = poste.get('nom')
 		prenom = poste.get('prenom')
-		date_nais = poste.get('dateNais')
+		date_nais = poste.get('date_naissance')
 		genre = poste.get('genre')
 		telephone = poste.get('telephone')
 		ville = poste.get('ville')
